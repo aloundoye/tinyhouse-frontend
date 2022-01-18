@@ -1,6 +1,6 @@
 import { Listings } from ".";
 
-interface Listing {
+export interface Listing {
   id: string;
   title: string;
   image: string;
