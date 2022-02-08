@@ -34,6 +34,7 @@ interface Props {
   title: string;
 }
 
+
 export const Listings = ({title}: Props) => {
   const {data, loading, error, refetch} = useQuery<ListingsData>(LISTINGS);
 
