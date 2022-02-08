@@ -24,4 +24,4 @@ npm run start
 yarn start
 ```
 
-Open [http://localhost:9000](http://localhost:9000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
