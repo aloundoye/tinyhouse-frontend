@@ -3,7 +3,7 @@
 > React website for Tinyhouse. This site uses Node.js as a backend. The repo for that is below
 
 
-![DJ Events](/public/tinyhouse.png 'Tinyhouse')
+![Tinyhouse](/public/tinyhouse.png 'Tinyhouse')
 
 [VIEW DEMO](https://www.tinyhouse.app/)
 
