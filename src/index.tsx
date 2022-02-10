@@ -1,12 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { Listings } from "./sections";
 import reportWebVitals from "./reportWebVitals";
 
