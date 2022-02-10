@@ -1,13 +1,26 @@
-import React from 'react';
-import {render} from 'react-dom';
-import {Listings} from './sections'
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { render } from "react-dom";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql,
+} from "@apollo/client";
+import { Listings } from "./sections";
+import reportWebVitals from "./reportWebVitals";
 
+const client = new ApolloClient({
+  uri: "/api",
+  cache: new InMemoryCache(),
+});
 render(
   <React.StrictMode>
-    <Listings title="Tinyhouse listing"/>
+    <ApolloProvider client={client}>
+      <Listings title="TinyHouse listing" />
+    </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
