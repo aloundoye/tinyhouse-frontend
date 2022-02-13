@@ -1,0 +1,16 @@
+overwrite: true
+schema: http://localhost:9000/api
+documents: 'src/**/!(*.generated).{ts,tsx}'
+generates:
+  src/types.ts:
+    - typescript
+  src/:
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: types.ts
+    plugins:
+      - typescript-operations
+      - "typescript-document-nodes"
+    config:
+      withHooks: false
