@@ -1,34 +1,12 @@
 import React from "react";
 import { useMutation, useQuery, gql } from "@apollo/client";
 import {
+  LISTINGS,
+  DELETE_LISTING,
   ListingsQuery,
   DeleteListingMutation,
   DeleteListingMutationVariables,
 } from "./Listings.generated";
-
-const LISTINGS = gql`
-  query Listings {
-    listings {
-      id
-      title
-      image
-      address
-      price
-      numOfGuests
-      numOfBeds
-      numOfBaths
-      rating
-    }
-  }
-`;
-
-const DELETE_LISTING = gql`
-  mutation DeleteListing($id: ID!) {
-    deleteListing(id: $id) {
-      id
-    }
-  }
-`;
 
 interface Props {
   title: string;
